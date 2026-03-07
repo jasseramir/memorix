@@ -1,6 +1,6 @@
 # Memorix | Your Smart Study Assistant
 
-**[span_4](start_span)Memorix** is an innovative web application designed to help high school students organize their study time by analyzing their strengths and weaknesses in different subjects to generate a personalized study schedule.[span_4](end_span)
+**Memorix** is an innovative web application designed to help high school students organize their study time by analyzing their strengths and weaknesses in different subjects to generate a personalized study schedule.[span_4](end_span)
 
 ---
 
