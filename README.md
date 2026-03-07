@@ -8,7 +8,7 @@
 
 * **Languages**: HTML5, CSS3, and JavaScript (ES6+).
 * **Assets**: Custom icons, web fonts, and favicons for an enhanced visual experience.
-* **Hosting**: [GitHub Pages](https://jasseramir.github.io/memorix/main/)
+* **Hosting**: GitHub Pages.
 
 ---
 
@@ -16,7 +16,7 @@
 
 ### 1) Online Version
 You can access the live project immediately here:
-[https://jasseramir.github.io/memorix/](https://jasseramir.github.io/memorix/)
+[https://jasseramir.github.io/memorix/](https://jasseramir.github.io/memorix/main/)
 
 ### 2) Local Execution
 * Download or extract the project files.
