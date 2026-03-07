@@ -1,0 +1,58 @@
+@media (max-width: 560px) {
+  .container { padding: 84px 6px 14px; }
+
+  .subject-header { flex-direction: column; align-items: stretch; }
+  .subject-actions { justify-content: stretch; }
+  .delete, .show-recommendation { width: 100%; }
+
+  .btn { width: 100%; }
+  .margin { margin-bottom: 20px; }
+  .btns-container { gap: 8px; }
+
+  .visible-content .btn { width: 100%; }
+
+  .schedule-table th { width: 110px; }
+}
+
+@media (min-width: 900px) {
+  :root { --fs-3: 1rem; }
+  .visible-content { gap: 16px; }
+
+  .visible-content .btn { justify-self: center; }
+  .actions-row { justify-content: center; }
+
+  .message-empty {
+    width: min(520px, 100%);
+    padding: 22px 18px;
+    font-size: var(--fs-2);
+    border-style: dashed;
+  }
+
+  .subjects-container,
+  .schedule {
+    width: min(760px, 100%);
+  }
+
+  .modal { width: 480px; }
+
+  .rec {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .rec-top { align-items: center; }
+
+  .rec-steps li {
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    padding: 12px 14px 12px 46px;
+  }
+
+  .rec-steps li::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .rec-metrics { gap: 10px; }
+}
