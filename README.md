@@ -8,7 +8,7 @@
 
 * **Languages**: HTML5, CSS3, and JavaScript (ES6+).
 * **Assets**: Custom icons, web fonts, and favicons for an enhanced visual experience.
-* **Hosting**: [GitHub Pages](https://jasseramir.github.io/memorix/)
+* **Hosting**: [GitHub Pages](https://jasseramir.github.io/memorix/main/)
 
 ---
 
