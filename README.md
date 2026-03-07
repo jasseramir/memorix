@@ -15,8 +15,7 @@
 ## How to Run
 
 ### 1) Online Version
-You can access the live project immediately here:
-[https://jasseramir.github.io/memorix/](https://jasseramir.github.io/memorix/main/)
+You can access the live project immediately [here](https://jasseramir.github.io/memorix/main/)
 
 ### 2) Local Execution
 * Download or extract the project files.
