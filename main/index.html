@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Memorix – A smart tool that helps you organize your study priorities and generate a personalized study schedule based on your performance.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Memorix">
+  <meta property="og:url" content="https://jasseramir.github.io/memorix/">
+  <meta property="og:title" content="Memorix - Your Smart Study Assistant">
+  <meta property="og:description" content="Organize your study priorities and improve your academic performance with an intelligent study schedule tailored specifically for you.">
+  <meta property="og:image" content="https://jasseramir.github.io/memorix/assets/images/preview.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Memorix - Your Smart Study Assistant">
+  <meta name="twitter:description" content="Organize your study priorities and improve your academic performance with an intelligent study schedule tailored specifically for you.">
+  <meta name="twitter:image" content="https://jasseramir.github.io/memorix/assets/images/preview.png">
+
+  <title>Memorix</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/styles/base.css">
+  <link rel="stylesheet" href="assets/styles/components.css">
+  <link rel="stylesheet" href="assets/styles/buttons.css">
+  <link rel="stylesheet" href="assets/styles/form.css">
+  <link rel="stylesheet" href="assets/styles/schedule.css">
+  <link rel="stylesheet" href="assets/styles/responsive.css">
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="title">
+      <i class="ri-compass-3-line"></i>
+      Memorix
+    </h1>
+
+    <div class="visible-content">
+      <div class="subjects-container" id="subjects"></div>
+
+      <div class="actions-row">
+        <button class="btn" id="createTable">
+          <i class="ri-calendar-schedule-line"></i>
+          Generate Schedule
+        </button>
+      </div>
+
+      <div class="schedule" id="schedule"></div>
+    </div>
+    
+    <div class="btns-container">
+      <button class="btn" id="addSubject">
+        <i class="ri-add-line"></i>
+        Add Subject
+      </button>
+
+      <button class="btn reset" id="reset">
+        <i class="ri-delete-bin-6-line"></i>
+        Delete All
+      </button>
+    </div>
+    
+    <div class="form-container" id="formContainer">
+      <form class="form" id="form">
+        <div class="close-container">
+          <button type="button" id="formClose" aria-label="Close">
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+
+        <h2 class="form-title">
+          <i class="ri-file-list-3-line"></i>
+          Add Subject
+        </h2>
+
+        <div class="form-grid">
+          <div class="field">
+            <label class="label" for="subjectName">Subject Name</label>
+
+            <input
+              type="text"
+              name="subject-name"
+              placeholder="Enter the subject name"
+              id="subjectName"
+            >
+
+            <p class="checker" id="nameChecker"></p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="studentGrade">
+              Your last exam score (%)
+            </label>
+
+            <input
+              type="text"
+              inputmode="decimal"
+              name="grade"
+              placeholder="Enter your exam score in percentage"
+              id="studentGrade"
+              maxlength="5"
+            >
+
+            <p class="checker" id="gradeChecker"></p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="difficulty">Subject Difficulty</label>
+
+            <div class="select-wrap">
+              <select class="difficulty" id="difficulty" name="difficulty">
+                <option value="" disabled selected>
+                  Choose difficulty level
+                </option>
+
+                <option value="so-easy">1 - Very Easy</option>
+                <option value="easy">2</option>
+                <option value="normal">3 - Moderate</option>
+                <option value="hard">4</option>
+                <option value="so-hard">5 - Very Difficult</option>
+              </select>
+
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </div>
+            
+            <p class="checker" id="selectChecker"></p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="studyingHours">
+              Weekly Study Time
+            </label>
+
+            <div class="select-wrap">
+              <select class="studying-hours" id="studyingHours">
+                <option value="" disabled selected>
+                  Select weekly study time
+                </option>
+
+                <option value="less-than-hour">Less than 1 hour</option>
+                <option value="1-hour">1 hour</option>
+                <option value="2-hours">2 hours</option>
+                <option value="3-hours">3 hours</option>
+                <option value="4-hours">4 hours</option>
+                <option value="5-hours">5 hours</option>
+                <option value="more-than-5-hours">More than 5 hours</option>
+              </select>
+              
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </div>
+            
+            <p class="checker" id="hoursChecker"></p>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="examSoon">
+            <label for="examSoon">
+              An exam is coming soon
+            </label>     
+          </div>
+          <input
+            type="submit"
+            class="btn"
+            id="addForm"
+            value="Add Subject"
+          >
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <!-- Confirm Modal -->
+  <div class="modal-container" id="confirmModal" aria-hidden="true">
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="confirmTitle"
+      aria-describedby="confirmMsg"
+    >
+
+      <div class="modal-head">
+        <h3 id="confirmTitle" class="modal-title">
+          Confirm Deletion
+        </h3>
+      </div>
+
+      <p id="confirmMsg" class="modal-msg">
+        Are you sure?
+      </p>
+
+      <div class="modal-actions">
+        <button type="button" class="btn ghost" id="confirmCancel">
+          Cancel
+        </button>
+
+        <button type="button" class="btn danger" id="confirmOk">
+          <i class="ri-delete-bin-6-line"></i>
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
+
+  <script src="assets/scripts/state.js"></script>
+  <script src="assets/scripts/ui.js"></script>
+  <script src="assets/scripts/validation.js"></script>
+  <script src="assets/scripts/priority.js"></script>
+  <script src="assets/scripts/recommendations.js"></script>
+  <script src="assets/scripts/schedule.js"></script>
+  <script src="assets/scripts/main.js"></script>
+
+</body>
+</html>
