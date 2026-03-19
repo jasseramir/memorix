@@ -62,13 +62,12 @@ body {
   justify-content: center;
   gap: .5rem;
   position: absolute;
-  top: 32px;
+  top: 20px;
   inset-inline-start: 50%;
   transform: translate(-50%, 0);
   font-size: var(--fs-1);
   font-weight: var(--fw-1);
   letter-spacing: .2px;
-  user-select: none;
 }
 
 .title i { font-size: 1.3em; }
