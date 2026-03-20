@@ -1,4 +1,5 @@
-const addSubject = document.getElementById('addSubject'),
+const themeButton = document.getElementById('theme-button'),
+      addSubject = document.getElementById('addSubject'),
       formContainer = document.getElementById('formContainer'),
       form = document.getElementById('form'),
       subjectName = document.getElementById('subjectName'),
@@ -14,6 +15,13 @@ const addSubject = document.getElementById('addSubject'),
       confirmMsg = document.getElementById('confirmMsg'),
       confirmOk = document.getElementById('confirmOk'),
       confirmCancel = document.getElementById('confirmCancel');
+
+const darkTheme = 'dark-theme';
+const iconTheme = 'ri-sun-line';
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+const getCurrentTheme = () => document.documentElement.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line';
 
 const createTable = document.getElementById('createTable');
 const scheduleBox = document.getElementById('schedule');

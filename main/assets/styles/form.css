@@ -7,7 +7,7 @@
   padding: 18px;
   background: rgba(2, 6, 23, .45);
   backdrop-filter: blur(6px);
-  z-index: 50;
+  z-index: 1000;
   overflow-y: auto;
 }
 

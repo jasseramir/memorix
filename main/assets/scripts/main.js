@@ -1,4 +1,5 @@
 renderPage();
+changeTheme();
 updateBtn();
 clearSchedule();
 
@@ -43,6 +44,13 @@ output.addEventListener('click', async (e) => {
         return;
     }
 });
+
+themeButton.addEventListener('click', () => {
+    document.documentElement.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
 
 addSubject.addEventListener('click', () => {
     clearErrors();

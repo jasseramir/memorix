@@ -22,6 +22,7 @@
   --fs-1: 2rem;
   --fs-2: 1.15rem;
   --fs-3: .95rem;
+  --dark-icon-fs: 1.5rem;
 
   --fw-1: 900;
   --fw-2: 700;
@@ -47,6 +48,7 @@ body {
   font-size: var(--fs-3);
   font-weight: var(--fw-3);
   line-height: 1.65;
+  transition: background .3s;
 }
 
 .container {
@@ -68,6 +70,7 @@ body {
   font-size: var(--fs-1);
   font-weight: var(--fw-1);
   letter-spacing: .2px;
+  transition: color .3s;
 }
 
 .title i { font-size: 1.3em; }

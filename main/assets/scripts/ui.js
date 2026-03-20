@@ -1,3 +1,10 @@
+function changeTheme() {
+    if (selectedTheme) {
+        document.documentElement.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+        themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme);
+    }
+}
+
 function updateBtn() {
     const count = subjects.length;
 
