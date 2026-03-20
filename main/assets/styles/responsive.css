@@ -6,7 +6,6 @@
   .delete, .show-recommendation { width: 100%; }
 
   .btn { width: 100%; }
-  .margin { margin-bottom: 20px; }
   .btns-container { gap: 8px; }
 
   .visible-content .btn { width: 100%; }
@@ -27,7 +26,9 @@
     font-size: var(--fs-2);
     border-style: dashed;
   }
-
+  
+  .btns-container { padding-bottom: 20px; }
+  
   .subjects-container,
   .schedule {
     width: min(760px, 100%);

@@ -22,13 +22,7 @@ function updateBtn() {
     if (reset) {
         const canDeleteAll = count > 1;
         reset.style.display = canDeleteAll ? 'inline-flex' : 'none';
-        reset.classList.add('margin');
     }
-    
-    if (reset.style.display === 'inline-flex')
-        addSubject.classList.remove('margin');
-    else
-        addSubject.classList.add('margin');
 }
 
 function syncCreateBtnText() {
